@@ -29,3 +29,5 @@ PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid 
 * pa make:model Post -mc
 
 * when dump a model in tinker, the null properties are not shown
+
+* Jeffrey uses templated.co/simplework
