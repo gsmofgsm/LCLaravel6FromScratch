@@ -57,3 +57,5 @@ this is due to cross site request forgery
 
 request()->all()
 request('title')
+
+@method('PUT')
