@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name = request('name');
+    return 'welcome, ' . $name;
 });
 
 Route::get('/test', function () {
-    return view('test');
+    $name = request('name');
+    return view('test', [
+        'name' => $name  // any variables with the same name as the array key will be available in blade
+    ]);
 });
