@@ -21,6 +21,11 @@ it works also without extending the Controller class
 
 * migration
 
+pa make:migration create_posts_table --create=posts
 $table->timestamp('published_at')->nullable()
 if no nullable, get this Exception
 PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default value for 'published_at'")
+
+* pa make:model Post -mc
+
+* when dump a model in tinker, the null properties are not shown
