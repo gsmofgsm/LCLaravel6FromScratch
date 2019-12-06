@@ -59,3 +59,12 @@ request()->all()
 request('title')
 
 @method('PUT')
+
+* validation
+
+request()->validate()
+$errors
+$errors->has('title')
+$errors->first('title')
+@error('title')
+@enderror
