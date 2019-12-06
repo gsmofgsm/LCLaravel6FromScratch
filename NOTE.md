@@ -31,3 +31,11 @@ PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid 
 * when dump a model in tinker, the null properties are not shown
 
 * Jeffrey uses templated.co/simplework
+
+* 
+Request::path() === '/'
+
+Request::path() === 'about'
+Request::is('about')
+it could also be a wildcard with in is()
+Request::is('about*')
