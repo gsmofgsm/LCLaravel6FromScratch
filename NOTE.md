@@ -43,3 +43,9 @@ Request::is('about*')
 * build process
 laravel provide out of box laravel-mix, which is a wrapper on top of webpack
 helper function mix('css/app.css') will also do the versioning work
+
+* App\Article::all()
+App\Article::take(2)
+App\Article::paginate(2)
+App\Article::latest()->get()
+
