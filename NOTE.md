@@ -39,3 +39,7 @@ Request::path() === 'about'
 Request::is('about')
 it could also be a wildcard with in is()
 Request::is('about*')
+
+* build process
+laravel provide out of box laravel-mix, which is a wrapper on top of webpack
+helper function mix('css/app.css') will also do the versioning work
