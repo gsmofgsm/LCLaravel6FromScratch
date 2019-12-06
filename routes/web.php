@@ -20,6 +20,8 @@ Route::get('/about', function () {
     return view('about', compact('articles'));
 });
 
+Route::get('/articles/{article}', 'ArticlesController@show');
+
 Route::get('/test', function () {
     return view('test');
 });
