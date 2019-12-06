@@ -21,6 +21,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/articles/{article}', 'ArticlesController@show');
+Route::get('/articles', 'ArticlesController@index');
 
 Route::get('/test', function () {
     return view('test');
