@@ -17,10 +17,11 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    $name = request('name');
-    return view('test', [
-        'name' => $name  // any variables with the same name as the array key will be available in blade
-    ]);
+    return view('test');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
 });
 
 // route wildcard
