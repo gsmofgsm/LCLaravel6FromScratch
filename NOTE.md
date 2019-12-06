@@ -15,4 +15,6 @@ it works also without extending the Controller class
 
 * Jeffrey uses TablePlus
 
- 
+* Query builder
+
+* Eloquent
