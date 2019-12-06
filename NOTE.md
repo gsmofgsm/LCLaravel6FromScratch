@@ -73,4 +73,7 @@ $errors->first('title')
 
 wildcard must in this case match the controller variable name.
 Though they do not need to match when no route model binding. (In this case the order matters)
-And route model biding automatically find Or Fail 
+And route model biding automatically find Or Fail
+
+* Model::create()
+When using Article::create(), be aware of mass assignment protection and add $fillable in the model
