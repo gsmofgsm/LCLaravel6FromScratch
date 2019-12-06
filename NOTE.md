@@ -94,3 +94,7 @@ belongsTo
 belongsToMany
 morphMany
 morphToMany
+
+* factory
+
+timestamps are auto-populated, so we can ignore them in the factory 
