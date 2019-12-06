@@ -9,3 +9,10 @@ htmlspecialchars($name, ENT_QUOTES)
 the compiled template files will be placed in storage/framework/views
 
 If no escaping wanted, e.x. show retrieved html from database, use {!!  !!} 
+
+* My first simple PostsController
+it works also without extending the Controller class
+
+* Jeffrey uses TablePlus
+
+ 
