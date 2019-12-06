@@ -18,3 +18,9 @@ it works also without extending the Controller class
 * Query builder
 
 * Eloquent
+
+* migration
+
+$table->timestamp('published_at')->nullable()
+if no nullable, get this Exception
+PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default value for 'published_at'")
