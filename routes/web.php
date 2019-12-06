@@ -12,8 +12,7 @@
 */
 
 Route::get('/', function () {
-    $name = request('name');
-    return 'welcome, ' . $name;
+    return view('welcome');
 });
 
 Route::get('/test', function () {
