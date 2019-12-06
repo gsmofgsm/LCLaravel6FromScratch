@@ -77,3 +77,10 @@ And route model biding automatically find Or Fail
 
 * Model::create()
 When using Article::create(), be aware of mass assignment protection and add $fillable in the model
+
+* Named routes
+
+route('articles.index')
+route('articles.show', $article->id)
+route('articles.show', $article)
+// when needing to pass id to wildcard in named route, we could also just pass the object

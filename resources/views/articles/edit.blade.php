@@ -6,7 +6,7 @@
             <div id="content">
                 <h1>Update Article</h1>
 
-                <form method="POST" action="/articles/{{ $article->id }}">
+                <form method="POST" action="{{ $article->path() }}">
                     @csrf
                     @method('PUT')
 
