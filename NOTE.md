@@ -49,3 +49,11 @@ App\Article::take(2)
 App\Article::paginate(2)
 App\Article::latest()->get()
 
+* when submitting form
+we get 
+419 Page Expired
+this is due to cross site request forgery
+@csrf
+
+request()->all()
+request('title')
