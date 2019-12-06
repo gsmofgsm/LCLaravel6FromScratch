@@ -84,3 +84,13 @@ route('articles.index')
 route('articles.show', $article->id)
 route('articles.show', $article)
 // when needing to pass id to wildcard in named route, we could also just pass the object
+
+
+* Eloquent relationships
+
+hasOne
+hasMany
+belongsTo
+belongsToMany
+morphMany
+morphToMany
