@@ -15,11 +15,10 @@ class ArticlesController extends Controller
         return view('articles.index', compact('articles'));
     }
 
-    public function show($id)
+    public function show(Article $article)
     {
         // Show a single resource
 
-        $article = Article::findOrFail($id);
         return view('articles.show', compact('article'));
     }
 
@@ -47,24 +46,22 @@ class ArticlesController extends Controller
         return redirect('/articles');
     }
 
-    public function edit($id)
+    public function edit(Article $article)
     {
         // Show a view to edit an existing resource
 
-        $article = Article::find($id);
         return view('articles.edit', compact('article'));
     }
 
-    public function update($id)
+    public function update(Article $article)
     {
         // Persist the edited resource
 
-        $article = Article::find($id);
         $article->title = request('title');
         $article->excerpt = request('excerpt');
         $article->body = request('body');
         $article->save();
-        return redirect('/articles/' . $id);
+        return redirect('/articles/' . $article->id);
     }
 
     public function destroy()

@@ -68,3 +68,9 @@ $errors->has('title')
 $errors->first('title')
 @error('title')
 @enderror
+
+* route model binding
+
+wildcard must in this case match the controller variable name.
+Though they do not need to match when no route model binding. (In this case the order matters)
+And route model biding automatically find Or Fail 
