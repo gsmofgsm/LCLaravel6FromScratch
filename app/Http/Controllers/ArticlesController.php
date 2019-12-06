@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
@@ -11,7 +12,12 @@ class ArticlesController extends Controller
     {
         // Show a list of resources
 
-        $articles = Article::latest()->paginate(2);
+        if ($tag = request('tag')) {
+            $tag = Tag::where('name', $tag)->firstOrFail();
+            $articles = $tag->articles;
+        } else {
+            $articles = Article::latest()->paginate(2);
+        }
         return view('articles.index', compact('articles'));
     }
 

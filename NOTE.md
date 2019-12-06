@@ -85,6 +85,8 @@ route('articles.show', $article->id)
 route('articles.show', $article)
 // when needing to pass id to wildcard in named route, we could also just pass the object
 
+route('articles.index', ['tag' => $tag->name])
+// this will add query string
 
 * Eloquent relationships
 
