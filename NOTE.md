@@ -147,3 +147,11 @@ opposite
 @else
     Laravel
 @endguest
+
+* Collection
+
+>>> $tags = Tag::all()
+>>> $tags->where('name', 'php')
+is not the same as
+>>> Tag::where('name', 'php')
+it looks like a sql query, but there is no sql query happening
