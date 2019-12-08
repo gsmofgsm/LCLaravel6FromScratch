@@ -69,6 +69,18 @@ $errors->first('title')
 @error('title')
 @enderror
 
+Within the @error section
+
+@error('tags')
+    <p class="help is-danger">{{ $errors->first('tags') }}</p>
+@enderror
+
+is equivalent to 
+
+@error('tags')
+    <p class="help is-danger">{{ $message }}</p>
+@enderror
+
 * route model binding
 
 wildcard must in this case match the controller variable name.
@@ -100,3 +112,10 @@ morphToMany
 * factory
 
 timestamps are auto-populated, so we can ignore them in the factory 
+
+* pivot table
+
+$article->tags()->attach(1)
+$article->tags()->attach([1, 2])
+$article->tags()->attach(Tag::find(1))
+$article->tags()->attach(Tag::findMany([1, 2]))

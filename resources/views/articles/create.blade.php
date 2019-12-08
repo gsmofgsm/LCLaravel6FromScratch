@@ -58,6 +58,26 @@
                     </div>
 
                     <div class="group">
+                        <div class="field">
+                            <label for="excerpt" class="label">Tags</label>
+                        </div>
+
+                        <div class="control">
+                            <select class="is-multiple @error('tags') is-danger @enderror" name="tags[]" multiple>
+                                @foreach($tags as $tag)
+                                    <option {{old('tags') && in_array($tag->id, old('tags'))
+                                    ? 'selected' : ''}} value="{{ $tag->id }}">
+                                        {{ $tag->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('tags')
+                                <p class="help is-danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="group">
                         <div class="control">
                             <button class="button" type="submit">Submit</button>
                         </div>
