@@ -119,3 +119,31 @@ $article->tags()->attach(1)
 $article->tags()->attach([1, 2])
 $article->tags()->attach(Tag::find(1))
 $article->tags()->attach(Tag::findMany([1, 2]))
+
+* auth
+
+pa ui
+
+Auth::user()
+auth()->user()
+
+@if( Auth::check() )
+    Auth::user()->name
+@else
+    Laravel
+@endif
+
+is equivalent to 
+
+@auth
+    Auth::user()->name
+@else
+    Laravel
+@endauth
+
+opposite
+@guest
+    Auth::user()->name
+@else
+    Laravel
+@endguest
